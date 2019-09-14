@@ -1775,7 +1775,7 @@
     {if}
         l1 1 = ! l2 &&
         {if}
-            (L.L.lights_ai_int_lighting_darker_or_on_timer) s0 (L.L.lights_ai_int_lighting_env_perception) -1 = ! &&
+            (L.L.lights_ai_int_lighting_darker_or_on_timer) s0
             {if}
                 l0 (L.L.lights_ai_timegap) - 0 max (S.L.lights_ai_int_lighting_darker_or_on_timer) s0
             {endif}
