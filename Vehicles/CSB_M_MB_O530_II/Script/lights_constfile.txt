@@ -51,9 +51,9 @@ lights_edge_avl
 
 
 
-Neu: Pro Glühbirne
+Neu: Pro GlÃ¼hbirne
 =============================================
-Inverse Widerstände (Leitwerte) in 1/Ohm.
+Inverse WiderstÃ¤nde (Leitwerte) in 1/Ohm.
 
 Begrenzungslichter: 5W (0.0347 1/Ohm)
 
@@ -95,18 +95,18 @@ lights_fahrerlicht_Rinv_bulb
 
 
 
-Alt: Für ganze Beleuchtungsgruppen
+Alt: FÃ¼r ganze Beleuchtungsgruppen
 =============================================
-Inverse Widerstände (Leitwerte) in 1/Ohm.
+Inverse WiderstÃ¤nde (Leitwerte) in 1/Ohm.
 
 
-Rücklicht: 2x10W (2x0.0174 1/Ohm)
+RÃ¼cklicht: 2x10W (2x0.0174 1/Ohm)
 
 [const]
 lights_rueck_Rinv
 0.0347
 
-Rücklicht: 2x10W (2x0.0174 1/Ohm)
+RÃ¼cklicht: 2x10W (2x0.0174 1/Ohm)
 
 [const]
 lights_rueck_2_Rinv
@@ -140,7 +140,7 @@ lights_brems_2_Rinv
 0.0694
 .............................
 
-Rückfahrscheinwerfer: 1x20W (0.0347 1/Ohm)
+RÃ¼ckfahrscheinwerfer: 1x20W (0.0347 1/Ohm)
 
 [const]
 lights_rueckfahr_Rinv
