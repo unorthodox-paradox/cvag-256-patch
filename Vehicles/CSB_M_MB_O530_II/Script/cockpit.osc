@@ -2,9 +2,9 @@
 'Cockpit-Script
 '##############
 
-'Simuliert alle unmittelbar mit dem Armaturenbrett zusammenhÃ¤ngenden Funktionen
+'Simuliert alle unmittelbar mit dem Armaturenbrett zusammenhängenden Funktionen
 
-'(c) 23.10.2009 RÃ¼diger HÃ¼lsmann
+'(c) 23.10.2009 Rüdiger Hülsmann
 '(c) 15.04.2010 Marcel Kuhnt
 
 'Script Version: 1.0
@@ -20,38 +20,38 @@
 
 
 'Revision History:
-'- RÃ¼diger HÃ¼lsmann	09.06.2009	Last Change				
+'- Rüdiger Hülsmann	09.06.2009	Last Change				
 '- Marcel Kuhnt		13.06.2009	Added Gearbox switches			
 '- Marcel Kuhnt		13.06.2009	Moved some switchvars to other scripts	
-'- RÃ¼diger HÃ¼lsmann	19.06.2009	Added Openable Window Triggers
-'- RÃ¼diger HÃ¼lsmann	23.10.2009	Added Battery and kinderwagen light
-'- Marcel Kuhnt		26.10.2009	Radio switchable with MotorkÃ¼hlung (replaced with cassette player)
-'- RÃ¼diger HÃ¼lsmann	28.10.2009	Added driver door
-'- RÃ¼diger HÃ¼lsmann	16.12.2009	Added driver curtain
-'- RÃ¼diger HÃ¼lsmann	18.12.2009	Bugfix driver curtain
+'- Rüdiger Hülsmann	19.06.2009	Added Openable Window Triggers
+'- Rüdiger Hülsmann	23.10.2009	Added Battery and kinderwagen light
+'- Marcel Kuhnt		26.10.2009	Radio switchable with Motorkühlung (replaced with cassette player)
+'- Rüdiger Hülsmann	28.10.2009	Added driver door
+'- Rüdiger Hülsmann	16.12.2009	Added driver curtain
+'- Rüdiger Hülsmann	18.12.2009	Bugfix driver curtain
 '- Marcel Kuhnt		15.04.2010	Traegheit debugged
-'- RÃ¼diger HÃ¼lsmann	13.05.2010	Engine temperature
-'- RÃ¼diger HÃ¼lsmann	03.06.2010	Automatic battery switch on key insertion (For standard-II-buses)
-'- RÃ¼diger HÃ¼lsmann	08.06.2010	Automatic battery switch made optional, Auxiliary heating switchable by button or switch
-'- RÃ¼diger HÃ¼lsmann	23.06.2010	Added mouse-clickable wiper lever on wheel console
-'- RÃ¼diger HÃ¼lsmann	08.07.2010	Wiper lever: Improved usability 
-'- RÃ¼diger HÃ¼lsmann	18.07.2010	Wiper lever: soundfix for keyboard operation and new ignition key algorithm 
-'- RÃ¼diger HÃ¼lsmann	16.09.2010	Auxheat Switch Bugfix
-'- RÃ¼diger HÃ¼lsmann	18.09.2010	Imported microphone switch
-'- RÃ¼diger HÃ¼lsmann	17.10.2010	Added pressure warning needle
-'- RÃ¼diger HÃ¼lsmann	23.10.2010	Added old-style gear button functionality
-'- RÃ¼diger HÃ¼lsmann	06.11.2010	Gear-button "1" functionality removed for old-style gear buttons
-'- RÃ¼diger HÃ¼lsmann	16.11.2010	Heating sliders
-'- RÃ¼diger HÃ¼lsmann	23.11.2010	Central lubrication, cabin heater sound
-'- RÃ¼diger HÃ¼lsmann	23.12.2010	Included 10 "multi-purpose" dummy switches
-'- RÃ¼diger HÃ¼lsmann	29.12.2010	ASR switch
-'- RÃ¼diger HÃ¼lsmann	04.01.2011	"D-only" gear selector function
-'- RÃ¼diger HÃ¼lsmann	05.01.2011	fog lamp switch, high beam lever animation, clock debugged
-'- RÃ¼diger HÃ¼lsmann	07.01.2011	Wiper lever sound and function debugges, availybility of several cockpit functions depending on bus type (via constfile)
-'- RÃ¼diger HÃ¼lsmann	16.01.2011	Support for wiper turn-switch
-'- RÃ¼diger HÃ¼lsmann	18.01.2011	Old-style gear button sounds
-'- RÃ¼diger HÃ¼lsmann	26.01.2011	Invertable driver door
-'- RÃ¼diger HÃ¼lsmann	26.01.2011	Thermometer
+'- Rüdiger Hülsmann	13.05.2010	Engine temperature
+'- Rüdiger Hülsmann	03.06.2010	Automatic battery switch on key insertion (For standard-II-buses)
+'- Rüdiger Hülsmann	08.06.2010	Automatic battery switch made optional, Auxiliary heating switchable by button or switch
+'- Rüdiger Hülsmann	23.06.2010	Added mouse-clickable wiper lever on wheel console
+'- Rüdiger Hülsmann	08.07.2010	Wiper lever: Improved usability 
+'- Rüdiger Hülsmann	18.07.2010	Wiper lever: soundfix for keyboard operation and new ignition key algorithm 
+'- Rüdiger Hülsmann	16.09.2010	Auxheat Switch Bugfix
+'- Rüdiger Hülsmann	18.09.2010	Imported microphone switch
+'- Rüdiger Hülsmann	17.10.2010	Added pressure warning needle
+'- Rüdiger Hülsmann	23.10.2010	Added old-style gear button functionality
+'- Rüdiger Hülsmann	06.11.2010	Gear-button "1" functionality removed for old-style gear buttons
+'- Rüdiger Hülsmann	16.11.2010	Heating sliders
+'- Rüdiger Hülsmann	23.11.2010	Central lubrication, cabin heater sound
+'- Rüdiger Hülsmann	23.12.2010	Included 10 "multi-purpose" dummy switches
+'- Rüdiger Hülsmann	29.12.2010	ASR switch
+'- Rüdiger Hülsmann	04.01.2011	"D-only" gear selector function
+'- Rüdiger Hülsmann	05.01.2011	fog lamp switch, high beam lever animation, clock debugged
+'- Rüdiger Hülsmann	07.01.2011	Wiper lever sound and function debugges, availybility of several cockpit functions depending on bus type (via constfile)
+'- Rüdiger Hülsmann	16.01.2011	Support for wiper turn-switch
+'- Rüdiger Hülsmann	18.01.2011	Old-style gear button sounds
+'- Rüdiger Hülsmann	26.01.2011	Invertable driver door
+'- Rüdiger Hülsmann	26.01.2011	Thermometer
 
 '------------------------------------------------------------------------------------------
 
@@ -939,7 +939,7 @@
 {end}
 
 '----------------------------------------------
-'Ã‘ÃªÃ°Ã¨Ã¯Ã²Ã» ÃªÃ°Ã»Ã¸Ã¥Ãª
+'Ñêğèïòû êğûøåê
 '----------------------------------------------
 
 {trigger:cp_kryshka1_opn_drag}
@@ -1099,16 +1099,16 @@
 {end}
 
 
-'Ã‘ÃªÃ°Ã¨Ã¯Ã² ÃªÃ«Ã¾Ã·Ã¨ÃªÃ  Ã¤Ã«Ã¿ Ã¶Ã¨Ã²Ã®. Ã‘Ã­Ã Ã·Ã Ã«Ã® Ã¢Ã§Ã¿Ã« Ã‘Ã«Ã Ã¢ÃªÃ®Ã¢Ã±ÃªÃ¨Ã© Ã±ÃªÃ°Ã¨Ã¯Ã², Ã¯Ã®Ã²Ã®Ã¬ Ã¯Ã¥Ã°Ã¥Ã¯Ã¨Ã±Ã Ã« Ã­Ã  Ã±Ã¢Ã®Ã©, Ã¯Ã®Ã²Ã®Ã¬ Ã§Ã Ã²Ã¥Ã° Ã¨ Ã­Ã Ã¯Ã¨Ã±Ã Ã« Ã±Ã¢Ã®Ã© Ã§Ã Ã­Ã®Ã¢Ã®, Ã Ã¢Ã²Ã®Ã° Wizard
+'Ñêğèïò êëş÷èêà äëÿ öèòî. Ñíà÷àëî âçÿë Ñëàâêîâñêèé ñêğèïò, ïîòîì ïåğåïèñàë íà ñâîé, ïîòîì çàòåğ è íàïèñàë ñâîé çàíîâî, àâòîğ Wizard
 
 {trigger:cp_key_rot_drag}
  
  
   (L.S.mouse_y) -30 / (L.L.cp_key_rot) + 0 max 1 min (S.L.cp_key_rot) s1
  
-'  0: ÃÃ²ÃªÃ«Ã¾Ã·Ã¥Ã­Ã¨Ã¥ Ã¯Ã¨Ã²Ã Ã­Ã¨Ã¿
-'  2: ÃÃ¨Ã²Ã Ã­Ã¨Ã¥ Ã¢ÃªÃ«Ã¾Ã·Ã¥Ã­Ã®, Ã­Ã® Ã¢Ã»ÃªÃ«Ã¾Ã·Ã¥Ã­Ã¨Ã¥ Ã¤Ã¢Ã¨Ã£Ã Ã²Ã¥Ã«Ã¿
-'  3: ÃŠÃ°Ã³Ã²Ã¨Ã¬ Ã±Ã²Ã Ã°Ã²Ã¥Ã°Ã®Ã¬, Ã¢Ã®Ã§Ã¢Ã°Ã Ã¹Ã Ã¥Ã¬ Ã¢ Ã¯Ã®Ã«Ã®Ã¦Ã¥Ã­Ã¨Ã¥ Ã§Ã Ã¦Ã¨Ã£Ã Ã­Ã¨Ã¿
+'  0: Îòêëş÷åíèå ïèòàíèÿ
+'  2: Ïèòàíèå âêëş÷åíî, íî âûêëş÷åíèå äâèãàòåëÿ
+'  3: Êğóòèì ñòàğòåğîì, âîçâğàùàåì â ïîëîæåíèå çàæèãàíèÿ
 
 	l1 0.2 <
 		{if}
@@ -1154,18 +1154,18 @@
 
 {trigger:cp_schluessel_mov_drag}
 
-'	Fallunterscheidung: SchlÃ¼ssel in x- oder y-Richtung?
+'	Fallunterscheidung: Schlüssel in x- oder y-Richtung?
 '	
 '	(L.S.mouse_y) abs (L.S.mouse_x) abs >=
 '	{if}
 '
-'		ZunÃ¤chst Translation (Einstecken)
+'		Zunächst Translation (Einstecken)
 '
 '		(L.S.mouse_y) 10 / (L.L.cp_schluessel_trans) + 0 max 1 min (S.L.cp_schluessel_trans) s0
 '		
 '		Stufen:
-'		0: SchlÃ¼ssel abgezogen
-'		1: SchlÃ¼ssel eingesteckt
+'		0: Schlüssel abgezogen
+'		1: Schlüssel eingesteckt
 '
 '		l0 0.5 <
 '		{if}
@@ -1663,7 +1663,7 @@
 
 '	Stufen:
 '	0: Umluftheizung
-'	1: DirektbelÃ¼ftung
+'	1: Direktbelüftung
 '	2: Frischluftheizung
 
 	l0 0.2 <
@@ -1686,7 +1686,7 @@
 {end}
 
 '------------------------------------
-'	ÃÃ Ã­Ã¤Ã³Ã± Ã¤Ã«Ã¿ Ã¨Ã­Ã¢Ã Ã«Ã¨Ã¤Ã®Ã¢
+'	Ïàíäóñ äëÿ èíâàëèäîâ
 '------------------------------------
 {trigger:Pandus_drag}
 
@@ -1702,7 +1702,7 @@
 	{if}
 		1 (S.L.pandus_pos)
 	{endif}
-'	ÃÃ²ÃªÃ°Ã»Ã² Ã¨Ã«Ã¨ Ã§Ã ÃªÃ°Ã»Ã² Ã¯Ã Ã­Ã¤Ã³Ã±.		
+'	Îòêğûò èëè çàêğûò ïàíäóñ.		
 	(L.L.pandus_pos) 0.4 > (L.L.door_3) &&
 	{if}
 		1 (S.L.pandus_opn)
@@ -1783,7 +1783,7 @@
 '	Frame
 '----------------------
 {macro:cockpit_frame}
-'Ãœbertragen der Schalterstellungen:
+'Übertragen der Schalterstellungen:
 	(L.L.cp_retarder_sw) (S.L.antrieb_retarder_sw)
 	(L.L.cp_retarder_sw_direkt) (S.L.antrieb_retarder_sw_direkt)
 	(L.L.cp_wischer_schnell_sw) (S.L.wiper_schnell_sw)
@@ -2135,20 +2135,20 @@
 	
 	(L.L.elec_busbar_main)
 	{if}
-'		ÃÃ Ã±Ã·Ã¥Ã² Ã®Ã¡Ã¹Ã¥Ã£Ã® Ã¯Ã°Ã®Ã¡Ã¥Ã£Ã 
+'		Ğàñ÷åò îáùåãî ïğîáåãà
 		(L.L.km_counter_km) trunc " 7" $IntToStrEnh 5 $SetLengthR
 		"." $+
 		(L.$.km_counter_m) 1 $SetLengthL $+
 		(S.$.odometr_full)
 
-'		ÃÃ Ã±Ã·Ã¥Ã² Ã±Ã³Ã²Ã®Ã·Ã­Ã®Ã£Ã® Ã¯Ã°Ã®Ã¡Ã¥Ã£Ã 
+'		Ğàñ÷åò ñóòî÷íîãî ïğîáåãà
 		(L.L.km_counter_km_day) " 4" $IntToStrEnh
 		"." $+
 		(L.L.km_counter_m_day) trunc $IntToStr $+
 		" " $+
 		(S.$.odometr_day)
 		
-'		Ã…Ã±Ã«Ã¨ Ã±Ã³Ã²Ã®Ã·Ã­Ã»Ã© Ã¯Ã°Ã®Ã¡Ã¥Ã£ Ã¡Ã³Ã¤Ã¥Ã² Ã¡Ã®Ã«Ã¼Ã¸Ã¥ 9999 ÃªÃ¬, Ã²Ã® Ã®Ã­ Ã Ã¢Ã²Ã®Ã¬Ã Ã²Ã¨Ã·Ã¥Ã±ÃªÃ¨ Ã±Ã¡Ã°Ã®Ã±Ã¨Ã²Ã±Ã¿ (Ã§Ã Ã¹Ã¨Ã²Ã  Ã®Ã² Ã¤Ã³Ã°Ã ÃªÃ )		
+'		Åñëè ñóòî÷íûé ïğîáåã áóäåò áîëüøå 9999 êì, òî îí àâòîìàòè÷åñêè ñáğîñèòñÿ (çàùèòà îò äóğàêà)		
 		(L.L.km_counter_km_day) 9999 >=
 		{if}
 			0 (S.L.odometr_sbros)
@@ -2222,7 +2222,7 @@
 		{endif}
 	{endif}
 
-'	Hebel-Animation fÃ¼r Fernlicht
+'	Hebel-Animation für Fernlicht
 	(L.L.lights_sw_fern)
 	{if}	
 		(L.L.cockpit_fernlichthebel) -1 = !
@@ -2263,12 +2263,12 @@
 
 {macro:cockpitlights_frame}
 
-'	StÃ¶rungsmelder
+'	Störungsmelder
 	(L.L.vdv_display_masterwarn)
 	(L.L.vdv_on) &&
 	(S.L.cockpit_light_masterfailure)
 
-'	TÃ¼rkontrolle
+'	Türkontrolle
 	(L.L.door_kinderwagenwunsch) 1 =
 	{if}
 		(L.L.kinderwagenwunsch_blinkgeber) (L.S.Timegap) + 2 min (S.L.kinderwagenwunsch_blinkgeber)
@@ -2487,7 +2487,7 @@
 
 {macro:traegheit}
 
-'Simuliert trÃ¤ges Verhalten (exponentiell)
+'Simuliert träges Verhalten (exponentiell)
 
 'Ladekonventionen:
 '	Sollwert		l0
@@ -2727,7 +2727,7 @@
 	(S.$.cockpit_temperatur)
 
 
-'Ã’Ã¥Ã°Ã¬Ã®Ã¬Ã¥Ã²Ã° Ã¢Ã­Ã¥Ã¸Ã­Ã¥Ã© Ã²Ã¥Ã¬Ã¯Ã¥Ã°Ã Ã²Ã³Ã°Ã». ÃˆÃ§Ã¬Ã¥Ã­Ã¨Ã« Ã¯Ã¥Ã°Ã¥Ã¬Ã¥Ã­Ã­Ã³Ã¾ Wizard
+'Òåğìîìåòğ âíåøíåé òåìïåğàòóğû. Èçìåíèë ïåğåìåííóş Wizard
 
 	(L.S.Weather_Temperature) s0 trunc " 3" $IntToStrEnh "." $+ 
 	l0 abs l0 abs trunc - 10 * trunc " 1" $IntToStrEnh $+
@@ -2947,8 +2947,8 @@
 
 
 '------------------------------------
-'	ÃÃ Ã­Ã¤Ã³Ã± Ã¤Ã«Ã¿ Ã¨Ã­Ã¢Ã Ã«Ã¨Ã¤Ã®Ã¢. Ã€Ã¢Ã²Ã®Ã° Ã±ÃªÃ°Ã¨Ã¯Ã²Ã  Dmitri, Ã±ÃªÃ°Ã¨Ã¯Ã² Ã¢Ã§Ã¿Ã² Ã¨Ã§ Ã‹Ã¨Ã€Ã§ 5292.30.
-'	ÃÃ«Ã Ã£Ã®Ã¤Ã Ã°Ã¾ Ã Ã¢Ã²Ã®Ã°Ã  Ã§Ã  Ã¥Ã£Ã® Ã²Ã°Ã³Ã¤!
+'	Ïàíäóñ äëÿ èíâàëèäîâ. Àâòîğ ñêğèïòà Dmitri, ñêğèïò âçÿò èç ËèÀç 5292.30.
+'	Áëàãîäàğş àâòîğà çà åãî òğóä!
 '------------------------------------
 {trigger:Pandus_drag}
 
@@ -2964,7 +2964,7 @@
 	{if}
 		1 (S.L.pandus_pos)
 	{endif}
-'	ÃÃ²ÃªÃ°Ã»Ã² Ã¨Ã«Ã¨ Ã§Ã ÃªÃ°Ã»Ã² Ã¯Ã Ã­Ã¤Ã³Ã±.		
+'	Îòêğûò èëè çàêğûò ïàíäóñ.		
 	(L.L.pandus_pos) 0.4 > (L.L.door_3) &&
 	{if}
 		1 (S.L.pandus_opn)
@@ -2998,7 +2998,7 @@
 {end}
 
 
-'	ÃÃ Ã­Ã¤Ã³Ã±...
+'	Ïàíäóñ...
 
 {macro:pandus_frame}
 
@@ -3006,7 +3006,7 @@
 	{if}
 		(L.L.pandus_pos) (L.S.Timegap) (L.L.pandus_speed) * + (S.L.pandus_pos)
 		
-'	ÃÃ Ã¤Ã¥Ã­Ã¨Ã¥(Ã¥Ã±Ã«Ã¨ Ã¯Ã®Ã¤Ã­Ã¿Ã²)
+'	Ïàäåíèå(åñëè ïîäíÿò)
 		(L.L.pandus_pos) 0.45 >
 		{if}
 			(L.L.pandus_speed) (L.S.Timegap) + (S.L.pandus_speed)
@@ -3018,22 +3018,22 @@
 		{endif}
 		
 
-'	ÃÃ²Ã±ÃªÃ®Ãª Ã¯Ã°Ã¨ Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã®Ã¬ Ã®Ã²ÃªÃ°.\Ã§Ã ÃªÃ°.
+'	Îòñêîê ïğè ìàêñèìàëüíîì îòêğ.\çàêğ.
 		(L.L.pandus_pos) 1 >
 		{if}
 			1 (S.L.pandus_pos)
-'	ÃÃ²Ã±ÃªÃ®Ãª
+'	Îòñêîê
 			(L.L.pandus_speed) /-/ 0.2 * (S.L.pandus_speed)
 		{endif}
 
 		(L.L.pandus_pos) 0 <
 		{if}
 			0 (S.L.pandus_pos)
-'	ÃÃ²Ã±ÃªÃ®Ãª
+'	Îòñêîê
 			(L.L.pandus_speed) /-/ 0.2 * (S.L.pandus_speed)
 		{endif}
 
-'	ÃÃ®Ã¤Ã¯Ã°Ã»Ã£Ã¨Ã¢Ã Ã­Ã¨Ã¥ Ã¯Ã°Ã¨ Ã¥Ã§Ã¤Ã¥ Ã± Ã®Ã²ÃªÃ°Ã»Ã²Ã»Ã¬ Ã¯Ã Ã­Ã¤Ã³Ã±Ã®Ã¬ (Ã­Ã  Ã¢Ã±Ã¿ÃªÃ¨Ã©... Ã¯Ã®Ã¦Ã Ã°Ã­Ã»Ã©))).
+'	Ïîäïğûãèâàíèå ïğè åçäå ñ îòêğûòûì ïàíäóñîì (íà âñÿêèé... ïîæàğíûé))).
 		(L.L.Velocity) 100 / 0.2 min s3
 		
 		(L.L.pandus_pos) 1 = (L.L.Velocity) 0 > &&
@@ -3041,7 +3041,7 @@
 			(L.L.pandus_speed) l3 - (S.L.pandus_speed)
 		{endif}
 
-'	ÃÃ®Ã«Ã­Ã Ã¿ Ã®Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ .	
+'	Ïîëíàÿ îñòàíîâêà.	
 		(L.L.Velocity) 2 > (L.L.pandus_pos) 0.5 > &&
 		{if}
 			0 (S.L.empty_01)
@@ -3063,7 +3063,7 @@
 		{endif}
 	{endif}
 
-'	ÃÃ²ÃªÃ°Ã»Ã² Ã¨Ã«Ã¨ Ã§Ã ÃªÃ°Ã»Ã² Ã¯Ã Ã­Ã¤Ã³Ã±.		
+'	Îòêğûò èëè çàêğûò ïàíäóñ.		
 	(L.L.pandus_pos) 0.4 > (L.L.door_3) &&
 	{if}
 		1 (S.L.pandus_opn)
@@ -3076,13 +3076,13 @@
 		0 (S.L.pandus_opn)
 	{endif}
 
-'	ÃÃ²Ã±ÃªÃ®Ãª Ã®Ã² Ã§Ã ÃªÃ°Ã»Ã²Ã®Ã© Ã¤Ã¢Ã¥Ã°Ã¨.		
+'	Îòñêîê îò çàêğûòîé äâåğè.		
 	(L.L.pandus_opn) (L.L.door_3) 0.9 < &&
 	{if}
 		(L.L.pandus_pos) 0.47 < 
 		{if}
 			0.47 (S.L.pandus_pos)
-'	ÃÃ²Ã±ÃªÃ®Ãª
+'	Îòñêîê
 			(L.L.pandus_speed) /-/ 0.2 * (S.L.pandus_speed)
 		{endif}
 	{endif}
@@ -3092,7 +3092,7 @@
 		(L.L.pandus_pos) 0.1 > 
 		{if}
 			0.1 (S.L.pandus_pos)
-'	ÃÃ²Ã±ÃªÃ®Ãª
+'	Îòñêîê
 			(L.L.pandus_speed) /-/ 0.2 * (S.L.pandus_speed)
 		{endif}
 	{endif}

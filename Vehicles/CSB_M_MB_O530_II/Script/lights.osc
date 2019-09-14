@@ -4,7 +4,7 @@
 
 'Simulates lighting system
 
-'(c) 11.05.2009 RÃ¼diger HÃ¼lsmann
+'(c) 11.05.2009 Rüdiger Hülsmann
 '(c) 25.07.2012 Marcel Kuhnt
 
 'Script Version: 1.1
@@ -12,26 +12,26 @@
 
 'Needs:
 '- Cockpit (Batterietrennschalter)
-'- Door (Haltestellenbremse fÃ¼r Bremslicht)
+'- Door (Haltestellenbremse für Bremslicht)
 
 'Revision History:
-'- RÃ¼diger HÃ¼lsmann	11.05.2009	Bremslichter an Bremsdruck gekoppelt
-'- Marcel Kuhnt		10.06.2009	SchlÃ¼sselschalter-Logik fÃ¼r Stand- und Abbl.-licht verÃ¤ndert, Fernlicht hinzugefÃ¼gt
+'- Rüdiger Hülsmann	11.05.2009	Bremslichter an Bremsdruck gekoppelt
+'- Marcel Kuhnt		10.06.2009	Schlüsselschalter-Logik für Stand- und Abbl.-licht verändert, Fernlicht hinzugefügt
 '- Marcel Kuhnt		10.08.2009	Added Revision History
-'- Marcel Kuhnt & RÃœH	22.10.2009	Removed Light Switch Sound (added to cockpit)
-'- RÃ¼diger HÃ¼lsmann	28.10.2009	Added changeover variable for lower level and front right interior light (fixed light overlay problem)
-'- RÃ¼diger HÃ¼lsmann	18.07.2010	Light switch adapted to new ignition key algorithm
+'- Marcel Kuhnt & RÜH	22.10.2009	Removed Light Switch Sound (added to cockpit)
+'- Rüdiger Hülsmann	28.10.2009	Added changeover variable for lower level and front right interior light (fixed light overlay problem)
+'- Rüdiger Hülsmann	18.07.2010	Light switch adapted to new ignition key algorithm
 '- Marcel Kuhnt		21.09.2010	Changed interpretation of AI_Light, light flasher
-'- RÃœdiger HÃ¼lsmann	15.11.2010	AI-warning lights
-'- RÃ¼diger HÃ¼lsmann	21.11.2010	Interiour and warning lights independent from busbar_main, blinker fix (situation reload)
-'- RÃ¼diger HÃ¼lsmann	27.11.2010	Warning lights bug removed
-'- RÃ¼diger HÃ¼lsmann	08.12.2010	Light bug "untenohnevornerechts" removed
+'- RÜdiger Hülsmann	15.11.2010	AI-warning lights
+'- Rüdiger Hülsmann	21.11.2010	Interiour and warning lights independent from busbar_main, blinker fix (situation reload)
+'- Rüdiger Hülsmann	27.11.2010	Warning lights bug removed
+'- Rüdiger Hülsmann	08.12.2010	Light bug "untenohnevornerechts" removed
 '- Marcel Kuhnt		28.12.2010	Extracted AI lighting in separated macro (for using with AI script)
 '- Marcel Kuhnt		02.01.2011	Corrected AI warn blinker deactivation
-'- RÃ¼diger HÃ¼lsmann	02.01.2011	Driver light fixed
-'- RÃ¼diger HÃ¼lsmann	05.01.2011	Fog lamp
-'- RÃ¼diger HÃ¼lsmann	07.01.2011	highbeam switch sound
-'- RÃ¼diger HÃ¼lsmann	18.01.2011	Blinker switch on sound added
+'- Rüdiger Hülsmann	02.01.2011	Driver light fixed
+'- Rüdiger Hülsmann	05.01.2011	Fog lamp
+'- Rüdiger Hülsmann	07.01.2011	highbeam switch sound
+'- Rüdiger Hülsmann	18.01.2011	Blinker switch on sound added
 '- Marcel Kuhnt		25.06.2011	Nebelscheinwerfer
 '- Marcel Kuhnt		25.06.2011	In HH kein Bremslicht bei aktiver Haltestellenbremse (jetzt per Konstante)
 '- Marcel Kuhnt		04.07.2011	Blinker Malfunction added
@@ -41,9 +41,9 @@
 '- Marcel Kuhnt		12.07.2012	Leuchten verbrauchen Strom (generieren Leitwert)
 '- Marcel Kuhnt		30.10.2012	Leuchtenkonfiguration per Config-Datei
 '- Marcel Kuhnt		04.11.2012	Blinker blinkt nur schnell, wenn entsprechende Seite kaputt ist.
-'- Marcel Kuhnt		09.01.2013	TÃ¼rleuchten sind jetzt hier
+'- Marcel Kuhnt		09.01.2013	Türleuchten sind jetzt hier
 '- Marcel Kuhnt		26.01.2013	Warnblinkanlage funktioniert auch bei ausgeschaltetem Strom
-'- Marcel Kuhnt		18.03.2013	DreitÃ¼rer
+'- Marcel Kuhnt		18.03.2013	Dreitürer
 
 '------------------------------------------------------------------------------------------
 
@@ -328,7 +328,7 @@
 	{endif}
 
 
-'Spotselect wird neu berechnet, damit GlÃ¼hbirnenschÃ¤den berÃ¼cksichtigt werden:
+'Spotselect wird neu berechnet, damit Glühbirnenschäden berücksichtigt werden:
 
 	-1 s0
 	(L.L.lights_fern) 0.5 >
@@ -792,7 +792,7 @@
 
 {macro:lights_repair_timecalc}
 
-'Berechnung der Zeit, die benÃ¶tigt wird, um die SchÃ¤den zu reparieren:
+'Berechnung der Zeit, die benötigt wird, um die Schäden zu reparieren:
 
 	s0
 
